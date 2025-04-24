@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>This one is for Aditi</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*A Digital Letter</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Dear Aditi, <br />
+			Do you remember the day we first met?<br />
+			<span class="comments">// The day you served me food. </span><br />
+			Since that day I started to wonder, who was this special girl.<br />
+			And then I got another chance miraculously... Im like 75% sure thats how you spell it.<br />
+			<span class="comments">// Your face Your Voice Your Words.</span><br />
+			Had me in a trance, and I got your number (yes thats right, I asked you first)<br />
+			As the time went on;<br />
+			The Bond grew stronger and stronger;<br />
+			Somehow you kept wanting to talk to me;<br />
+			First about anime, then about school, then about life, and then about the future;<br />
+			We have traveled a long way together (literally and the opposite of literally);<br />
+			And I cant wait to travel more with you;<br />
+			<br>
+			<br>
+			My digital letter is running out of ink, so I need to finish this:<br />
+			In summary, in conclusion, in the end, to supercede my comments;<br />
+			Thank you for choosing me, and I love you!<br />
+			<br>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					The number of days I have called you mine
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU<br/>
+					<div class="signature"> Ashwin K.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2022, 10, 9);
+together.setHours(12);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 75000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 3000);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
